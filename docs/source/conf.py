@@ -23,6 +23,7 @@ sys.path.append(os.path.abspath("ext"))
 
 extensions = [
     "sphinx.ext.autosectionlabel",
+    "sphinx.ext.githubpages",
     "sphinx_rtd_theme",
     "role_enum",
     "directive_message",
