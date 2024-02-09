@@ -1,0 +1,14 @@
+{% extends "!layout.html" %}
+
+{% block menu %}
+{{ super() }}
+
+<p class="caption">
+  <span class="caption-text">Appendix</span>
+</p>
+<ul>
+  <li><a href="{{ pathto('genindex') }}">Index</a></li>
+  <li><a href="{{ pathto('glossary') }}">Glossary</a></li>
+</ul>
+
+{% endblock %}

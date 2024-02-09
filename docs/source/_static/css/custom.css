@@ -1,0 +1,73 @@
+:root {
+  --table-head-bg: #2980B9;
+  --table-head-fg: #FFFFFF;
+  --table-row-bg-even: #EEE;
+  --table-row-bg-odd: #CCC;
+}
+
+
+.rst-content table.docutils {
+  width: 100%;
+
+  .head {
+    background-color: var(--table-head-bg);
+
+    p,
+    a {
+      color: var(--table-head-fg);
+    }
+
+  }
+
+  tr td {
+    white-space: unset;
+  }
+
+}
+
+.indent-remaining,
+.indent-remaining~* {
+  margin-inline-start: 10%;
+}
+
+.rst-content section.device-message table .head {
+  filter: invert()
+}
+
+.rst-content table.message-quickref tr {
+
+  .literal {
+    font-size: unset;
+  }
+
+  >:nth-child(-n+2) {
+    text-align: center;
+  }
+
+}
+
+.rst-content code.literal.enum-val,
+.rst-content table.docutils>tbody>tr code.literal {
+  font-size: unset;
+  font-weight: bold;
+}
+
+.rst-content table.docutils:not(.field-list) {
+
+  caption {
+    display: none;
+  }
+
+  tr.row-even td {
+    background-color: var(--table-row-bg-even);
+  }
+
+  tr.row-odd td {
+    background-color: var(--table-row-bg-odd);
+  }
+
+}
+
+.rst-content table.first-col-right tr>:first-child {
+  text-align: right;
+}
