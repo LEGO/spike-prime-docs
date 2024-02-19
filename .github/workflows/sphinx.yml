@@ -30,6 +30,8 @@ jobs:
       - name: Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v4.0.0
+        with:
+          enablement: true
       - name: Get tool versions
         id: tool_versions
         run: echo "python=$(grep --only-matching --perl-regexp 'python \K\S+' .tool-versions)" >> $GITHUB_OUTPUT
