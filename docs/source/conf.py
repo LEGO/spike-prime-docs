@@ -9,7 +9,7 @@
 project = "SPIKE™ Prime protocol"
 copyright = "2024, LEGO® Education"
 author = "LEGO® Education"
-release = "0.1"
+release = "1.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -23,6 +23,7 @@ sys.path.append(os.path.abspath("ext"))
 
 extensions = [
     "sphinx.ext.autosectionlabel",
+    "sphinx.ext.extlinks",
     "sphinx.ext.githubpages",
     "sphinx_rtd_theme",
     "role_enum",
@@ -31,6 +32,13 @@ extensions = [
 
 templates_path = ["_templates"]
 exclude_patterns = []
+
+extlinks = {
+    "repo": (
+        "https://github.com/LEGO/spike-prime-docs/tree/main/%s",
+        "https://github.com/LEGO/spike-prime-docs/%s",
+    ),
+}
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
